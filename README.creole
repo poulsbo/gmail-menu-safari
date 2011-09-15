@@ -19,5 +19,5 @@ Otherwise the two menu items function identically.
 
 === Installation
 
-[https://github.com/poulsbo/gmail-menu-safari/raw/master/gmail-menu.safariextz|This link]
+[[https://github.com/poulsbo/gmail-menu-safari/raw/master/gmail-menu.safariextz|This link]]
 should download the packaged Safari extension. Double click to install.
