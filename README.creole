@@ -16,3 +16,8 @@ Because it's a Gmail composition window, Gmail address completion works as usual
 The **Gmail** menu item simplifies the URL by removing parameters and simplifying
 YouTube links. The **Gmail (Full URL)** menu item includes the full page URL.
 Otherwise the two menu items function identically.
+
+=== Installation
+
+[https://github.com/poulsbo/gmail-menu-safari/raw/master/gmail-menu.safariextz|This link]
+should download the packaged Safari extension. Double click to install.
