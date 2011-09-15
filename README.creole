@@ -1,0 +1,18 @@
+== gmail-menu-safari
+
+This is a simple Safari Extension that adds two menu items to the context menu.
+To use, install, then right click (control click on a one-button Mac mouse)
+on any page. You should see two menu items:
+
+* Gmail
+* Gmail (Full URL)
+
+Each of these opens a new Safari tab or window set up to compose an email. The
+subject is the the page title. The body is the URL of the page. If any
+text is selected on the page, it is included in the body.
+
+Because it's a Gmail composition window, Gmail address completion works as usual.
+
+The **Gmail** menu item simplifies the URL by removing parameters and simplifying
+YouTube links. The **Gmail (Full URL)** menu item includes the full page URL.
+Otherwise the two menu items function identically.
