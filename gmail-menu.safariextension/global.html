@@ -18,7 +18,7 @@ function commandHandler(event)
 function gmail_this_glue(urlPolicy)
 {
     var activeTab = safari.application.activeBrowserWindow.activeTab;
-    activeTab.page.dispatchMessage("gmailThis", [urlPolicy, activeTab.url]);
+    activeTab.page.dispatchMessage("gmailThis", urlPolicy);
 }
 
 </script>

@@ -1,10 +1,6 @@
-function gmail_this(urlPolicy, activeUrl)
+function gmail_this(urlPolicy)
 {
     var url = location.href;
-    // If there are multiple frames in a tab, they will all get messaged.
-    // Ignore except for the main frame, which we identify by URL.
-    if (url != activeUrl)
-        return;
     if (urlPolicy == 'cleanUrl') {
         var m = /^https?:\/\/[a-z0-9_]+\.youtube\.com\/watch\?v=([^&]+)/i.exec (url);
         if (m) {
@@ -48,9 +44,10 @@ function handleMessage(event)
     var messageName = event.name;
     var messageData = event.message;
     if (messageName === "gmailThis") {
-        urlPolicy = messageData[0];
-        url       = messageData[1];
-        gmail_this(urlPolicy, url);
+	if (window === window.top) {
+            urlPolicy = messageData;
+            gmail_this(urlPolicy);
+	}
     }
 }
 
