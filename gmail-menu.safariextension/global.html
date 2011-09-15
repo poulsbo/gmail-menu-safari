@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<script>
+
+safari.application.addEventListener("command", commandHandler, true);
+
+function commandHandler(event)
+{
+    if (event.command == 'gmail_this_clean') {
+        gmail_this_glue('cleanUrl');
+        return;
+    }
+    else if (event.command == 'gmail_this_full') {
+        gmail_this_glue('fullUrl');
+        return;
+    }
+}
+
+function gmail_this_glue(urlPolicy)
+{
+    var activeTab = safari.application.activeBrowserWindow.activeTab;
+    activeTab.page.dispatchMessage("gmailThis", [urlPolicy, activeTab.url]);
+}
+
+</script>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Alan Liu</string>
+	<key>Builder Version</key>
+	<string>7534.48.3</string>
+	<key>CFBundleDisplayName</key>
+	<string>Gmail Menu</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.finwhale.gmail-menu</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>gmail_this_clean</string>
+				<key>Identifier</key>
+				<string>gmail-this-clean</string>
+				<key>Title</key>
+				<string>Gmail</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>gmail_this_full</string>
+				<key>Identifier</key>
+				<string>gmail-this-full</string>
+				<key>Title</key>
+				<string>Gmail (Full URL)</string>
+			</dict>
+		</array>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Blacklist</key>
+		<array>
+			<string>http://mail.google.com/*</string>
+			<string>https://mail.google.com/*</string>
+		</array>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>inject.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Gmail link to page from context menu</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
