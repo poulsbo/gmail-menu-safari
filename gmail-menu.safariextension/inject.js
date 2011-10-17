@@ -22,7 +22,7 @@ function gmail_this(urlPolicy)
 
     body = '' + body;
     if (body.length)
-        body = '"' + body + '" (From: ' + url + ')';
+        body = '"' + body + '"%0A%0A- From ' + url;
     else {
         var intro = ['Check out: ', 'Take a look at: ', 'Interesting: ', 'Worth reading: ', 'What do you think: ', 'Worth a look: '];
         body = intro[Math.floor(Math.random() * intro.length)] + url;
