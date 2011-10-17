@@ -21,8 +21,11 @@ function gmail_this(urlPolicy)
         body = document.getSelection();
 
     body = '' + body;
-    if (body.length)
-        body = '"' + body + '"%0A%0A- From ' + url;
+    footer = '';
+    if (body.length) {
+        body = '"' + body + '"'
+	footer = '- From ' + url;
+    }
     else {
         var intro = ['Check out: ', 'Take a look at: ', 'Interesting: ', 'Worth reading: ', 'What do you think: ', 'Worth a look: '];
         body = intro[Math.floor(Math.random() * intro.length)] + url;
@@ -35,7 +38,11 @@ function gmail_this(urlPolicy)
             subj = title.firstChild.innerText;
     }
 
-    var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body) + '&zx=AINSDAIHCZ&shva=1&disablechatbrowsercheck=1&ui=1';
+    var bodyElem = '&body=' + encodeURIComponent(body)
+    if (footer) {
+	bodyElem += '%0A%0A' + encodeURIComponent(footer)
+    }
+    var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=' + encodeURIComponent(subj) + bodyElem + '&zx=AINSDAIHCZ&shva=1&disablechatbrowsercheck=1&ui=1';
     var gmailWin = window.open(gmailUrl);
 }
 
